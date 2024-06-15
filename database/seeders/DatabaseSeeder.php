@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Driver;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +13,34 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory()->create([
+            'name' => 'Директор',
+            'email' => 'director@example.com',
+            'level' => 3,
+        ]);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Руководитель',
+            'email' => 'cto@example.com',
+            'level' => 2,
         ]);
+
+        User::factory()->create([
+            'name' => 'Работник',
+            'email' => 'worker@example.com',
+            'level' => 1,
+        ]);
+
+        $driver1 = new Driver();
+        $driver1->name = 'Водитель 1';
+        $driver1->save();
+
+        $driver2 = new Driver();
+        $driver2->name = 'Водитель 2';
+        $driver2->save();
+
+        $driver3 = new Driver();
+        $driver3->name = 'Водитель 3';
+        $driver3->save();
     }
 }
