@@ -15,6 +15,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         Главная
                     </x-nav-link>
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                        Сотрудники
+                    </x-nav-link>
+                    <x-nav-link :href="route('cars')" :active="request()->routeIs('cars')">
+                        Автомобили
+                    </x-nav-link>
+                    <x-nav-link :href="route('categories')" :active="request()->routeIs('categories')">
+                        Категории
+                    </x-nav-link>
+                    <x-nav-link :href="route('drivers')" :active="request()->routeIs('drivers')">
+                        Водители
+                    </x-nav-link>
+                    <x-nav-link :href="route('trips')" :active="request()->routeIs('trips')">
+                        Поездки
+                    </x-nav-link>
                 </div>
             </div>
 

@@ -11,19 +11,19 @@
                 <div class="p-6 text-gray-900">
                     <ul>
                         <li>
-                            <a href="/users">Пользователи</a>
+                            <a href="/users">Сотрудники</a>
                         </li>
                         <li>
-                            <a href="/users">Автомобили</a>
+                            <a href="/cars">Автомобили</a>
                         </li>
                         <li>
-                            <a href="/users">Категории автомобилей</a>
+                            <a href="/categories">Категории автомобилей</a>
                         </li>
                         <li>
-                            <a href="/users">Водители</a>
+                            <a href="/drivers">Водители</a>
                         </li>
                         <li>
-                            <a href="/users">Поездки</a>
+                            <a href="/trips">Поездки</a>
                         </li>
                     </ul>
                 </div>
