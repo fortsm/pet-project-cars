@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            Главная
         </h2>
     </x-slot>
 
@@ -9,7 +9,23 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
+                    <ul>
+                        <li>
+                            <a href="/users">Пользователи</a>
+                        </li>
+                        <li>
+                            <a href="/users">Автомобили</a>
+                        </li>
+                        <li>
+                            <a href="/users">Категории автомобилей</a>
+                        </li>
+                        <li>
+                            <a href="/users">Водители</a>
+                        </li>
+                        <li>
+                            <a href="/users">Поездки</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
