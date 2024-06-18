@@ -47,6 +47,12 @@ cp .env.example .env
 ./vendor/bin/sail artisan migrate --seed
 ```
 
+- сборка css и js
+
+```
+./vendor/bin/sail npm run build
+```
+
 ### Запросы к API
 
 - Список всех машин
@@ -78,6 +84,27 @@ http://localhost/api/cars?model=tesla
 ```
 http://localhost/api/cars?user_id=1&from=2024-07-20&till=2024-07-31
 ```
+
+### Административная часть сайта
+
+- выполнить вход
+
+```
+http://localhost/login
+login: director@example.com
+pass: 123
+```
+
+- [Сотрудники](http://localhost/users)
+- [Автомобили](http://localhost/cars)
+- [Категории автомобилей](http://localhost/categories)
+- [Водители](http://localhost/drivers)
+- [Поездки](http://localhost/trips)
+- [Добавить поездку](http://localhost/trips/create)
+
+Предусмотрена валидация в соответствии с заданием в классе StoreTripRequest
+
+[Скриншот](https://disk.yandex.ru/i/ovg-l84f6l3POA)
 
 ### остановка контейнеров
 

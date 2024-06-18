@@ -34,6 +34,22 @@
                                 <a href="/drivers/{{ $car->driver->id }}">{{ $car->driver->name }}</a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>Доступна сотрудникам</td>
+                            <td>
+                                @foreach ($car->users() as $user)
+                                    <a href="/users/{{ $user->id }}">{{ $user->name }}</a>
+                                @endforeach
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Запланированные поездки</td>
+                            <td>
+                                @foreach ($car->trips as $trip)
+                                    <a href="/trips/{{ $trip->id }}">{{ $trip->from }} - {{ $trip->till }}</a> &nbsp;
+                                @endforeach
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>

@@ -8,26 +8,24 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    <table style="width:100%">
+                <table class="w-full">
+                    <tr>
+                        <th class="text-left py-3 px-4 font-semibold">ID</th>
+                        <th class="text-left py-3 px-4 font-semibold">Имя</th>
+                        <th class="text-left py-3 px-4 font-semibold">Автомобиль</th>
+                    </tr>
+                    @foreach ($drivers as $driver)
                         <tr>
-                            <th>ID</th>
-                            <th>Имя</th>
-                            <th>Автомобиль</th>
+                            <td>{{ $driver->id }}</td>
+                            <td>
+                                <a href="/drivers/{{ $driver->id }}">{{ $driver->name }}</a>
+                            </td>
+                            <td>
+                                <a href="/cars/{{ $driver->car->id }}">{{ $driver->car->name }}</a>
+                            </td>
                         </tr>
-                        @foreach ($drivers as $driver)
-                            <tr>
-                                <td>{{ $driver->id }}</td>
-                                <td>
-                                    <a href="/drivers/{{ $driver->id }}">{{ $driver->name }}</a>
-                                </td>
-                                <td>
-                                    <a href="/cars/{{ $driver->car->id }}">{{ $driver->car->name }}</a>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </table>
-                </div>
+                    @endforeach
+                </table>
             </div>
         </div>
     </div>

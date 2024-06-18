@@ -33,21 +33,23 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                <div class="max-w-xl">
-                    Доступные категории автомобилей
-                    <table style="width:100%">
+                Доступные категории автомобилей
+                <table class="w-full">
+                    <tr>
+                        <th class="text-left py-3 px-4 font-semibold">ID</th>
+                        <th class="text-left py-3 px-4 font-semibold">Название</th>
+                    </tr>
+                    @foreach ($user->categories as $category)
                         <tr>
-                            <th>ID</th>
-                            <th>Название</th>
+                            <td>{{ $category->id }}</td>
+                            <td>
+                                <a href="/categories/{{ $category->id }}">
+                                    {{ $category->name }}
+                                </a>
+                            </td>
                         </tr>
-                        @foreach ($user->categories as $category)
-                            <tr>
-                                <td>{{ $category->id }}</td>
-                                <td>{{ $category->name }}</td>
-                            </tr>
-                        @endforeach
-                    </table>
-                </div>
+                    @endforeach
+                </table>
             </div>
         </div>
     </div>
